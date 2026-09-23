@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2026 The Stdlib Authors.
@@ -16,28 +16,35 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
+
+import { complex64ndarray } from '@stdlib/types/ndarray';
 
 /**
-* BLAS level 1 routine to compute the L2-norm of a one-dimensional single-precision complex floating-point ndarray.
+* Computes the L2-norm of a one-dimensional single-precision complex floating-point ndarray.
 *
-* @module @stdlib/blas-base-ndarray-scnrm2
+* ## Notes
+*
+* -   The function expects the following ndarrays:
+*
+*     -   a one-dimensional input ndarray.
+*
+* @param arrays - array-like object containing ndarrays
+* @returns L2-norm
 *
 * @example
 * var Complex64Vector = require( '@stdlib/ndarray-vector-complex64' );
-* var scnrm2 = require( '@stdlib/blas-base-ndarray-scnrm2' );
 *
 * var x = new Complex64Vector( [ 1.0, 2.0, 2.0, 4.0 ] );
 *
 * var y = scnrm2( [ x ] );
 * // returns 5.0
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function scnrm2( arrays: [ complex64ndarray ] ): number;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = scnrm2;
